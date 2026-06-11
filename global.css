@@ -1,0 +1,155 @@
+:root {
+  --primary-blue: #b5e3ef;
+  --dark-blue: #021421;
+  --text-dark: #404040;
+  --text-light: #ffffff;
+  --accent-blue: #1a73e8;
+  --cyan: #59d2f2;
+  --bg-light: #f4f9fa;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-label {
+  display: block;
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 48px;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-dark);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--text-light) !important;
+}
+
+.text-light-blue {
+  color: var(--primary-blue) !important;
+}
+
+.text-cyan {
+  color: var(--cyan) !important;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  gap: 10px;
+  font-family: var(--font-body);
+}
+
+.btn-light {
+  background-color: var(--primary-blue);
+  color: var(--dark-blue);
+}
+
+.btn-light:hover {
+  background-color: #9cd5e6;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: var(--dark-blue);
+}
+
+.btn-white:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-dark {
+  background-color: var(--dark-blue);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #042842;
+}
+
+.btn-arrow {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-full {
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Innovation - ACM NMIMS Indore</title>
+  <meta name="description" content="Explore technical projects, research, and open-source innovations developed by ACM NMIMS Indore members.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Projects Grid Layout */
+    .projects-layout {
+      display: grid;
+      grid-template-columns: 0.3fr 0.7fr;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Sidebar Filters */
+    .filter-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .filter-section {
+      background-color: #bce6f6;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      color: var(--text-light-primary);
+    }
+
+    .filter-title {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding-bottom: 8px;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text-light-primary);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+
+    .filter-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-btn {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-light-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 4px 0;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--accent-blue);
+      font-weight: 700;
+      transform: translateX(4px);
+    }
+
+    /* Projects Column */
+    .projects-column {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-light-primary);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-card-img {
+      width: 40%;
+      min-width: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-card-body {
+      width: 60%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-card-title {
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .project-card-desc {
+      font-size: 15px;
+      color: var(--text-light-secondary);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .project-card-tech {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-light-secondary);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding-top: 16px;
+    }
+
+    .project-card-tech span {
+      color: var(--accent-blue);
+    }
+
+    /* Globe Background Drawings */
+    .globe-drawing-left {
+      position: absolute;
+      left: -200px;
+      bottom: 20%;
+      width: 400px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .globe-drawing-right {
+      position: absolute;
+      right: -200px;
+      top: 10%;
+      width: 400px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .projects-layout {
+        grid-template-columns: 1fr;
+      }
+      .project-card {
+        flex-direction: column;
+      }
+      .project-card-img {
+        width: 100%;
+        height: 240px;
+      }
+      .project-card-body {
+        width: 100%;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero animate-fade-in" style="background-image: url('assets/images/Projects_page1_img8.png');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Projects & Innovation</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects main content -->
+  <section class="section-dark" style="position: relative;">
+    <!-- Abstract Globe Drawings from PDFs -->
+    <img src="assets/images/Projects_page1_img5.png" class="globe-drawing-right" alt="Abstract wireframe globe illustration">
+    <img src="assets/images/Projects_page1_img5.png" class="globe-drawing-left" alt="Abstract wireframe globe illustration">
+
+    <div class="container">
+      <div class="projects-layout">
+        <!-- Sidebar filters -->
+        <aside class="filter-sidebar animate-fade-in">
+          <!-- Search filter -->
+          <div class="filter-section">
+            <h3 class="filter-title">Search</h3>
+            <div class="search-input-wrapper">
+              <input type="text" id="project-search" class="search-input" placeholder="Type to search...">
+            </div>
+          </div>
+
+          <!-- Project Domains -->
+          <div class="filter-section">
+            <h3 class="filter-title">Project Domains</h3>
+            <ul class="filter-list" id="domain-filters">
+              <li><button class="filter-btn active" data-filter="all">All Domains</button></li>
+              <li><button class="filter-btn" data-filter="ai">Artificial Intelligence</button></li>
+              <li><button class="filter-btn" data-filter="web">Web Development</button></li>
+              <li><button class="filter-btn" data-filter="mobile">Mobile Applications</button></li>
+              <li><button class="filter-btn" data-filter="data">Data Science</button></li>
+              <li><button class="filter-btn" data-filter="research">Research & Innovation</button></li>
+              <li><button class="filter-btn" data-filter="open">Open Source</button></li>
+            </ul>
+          </div>
+
+          <!-- Archives -->
+          <div class="filter-section">
+            <h3 class="filter-title">Archives</h3>
+            <ul class="filter-list" id="year-filters">
+              <li><button class="filter-btn active" data-filter="all">All Years</button></li>
+              <li><button class="filter-btn" data-filter="2026">2026</button></li>
+              <li><button class="filter-btn" data-filter="2025">2025</button></li>
+              <li><button class="filter-btn" data-filter="2024">2024</button></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Right column listing -->
+        <main class="projects-column animate-fade-in">
+          <!-- Project 1 -->
+          <div class="project-card" data-domains="ai" data-year="2026">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img2.png" alt="Smart Attendance System screen showing facial recognition">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Smart Attendance System</h2>
+              <p class="project-card-desc">An intelligent attendance system that uses facial recognition technology to automate classroom attendance, reducing manual effort and improving accuracy.</p>
+              <div class="project-card-tech">Tech Stack: <span>Python, OpenCV, TensorFlow</span></div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-domains="web" data-year="2025">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img4.png" alt="ACM Event Management Portal screen showing database analytics dashboard">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">ACM Event Management Portal</h2>
+              <p class="project-card-desc">A web application designed to streamline event registrations, participant management, certificate distribution, and event announcements.</p>
+              <div class="project-card-tech">Tech Stack: <span>React, Node.js, MongoDB</span></div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-domains="ai,open" data-year="2026">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img6.png" alt="Career Chatbot UI showing messages dialogue">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Career Guidance Chatbot</h2>
+              <p class="project-card-desc">An intelligent chatbot that helps students explore career paths, recommend learning resources, and answer academic queries.</p>
+              <div class="project-card-tech">Tech Stack: <span>Python, NLP, OpenAI API</span></div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-domains="data,research" data-year="2025">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img7.png" alt="Resume screening database dashboard">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Resume Analyzer</h2>
+              <p class="project-card-desc">A resume screening tool that evaluates resumes, identifies skill gaps, and provides suggestions for improvement.</p>
+              <div class="project-card-tech">Tech Stack: <span>Python, Scikit-Learn, NLP</span></div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card" data-domains="mobile" data-year="2024">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img9.png" alt="Campus Navigation app on screen displaying campus blueprint map">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Campus Navigation Application</h2>
+              <p class="project-card-desc">A mobile application enabling students and visitors to easily locate classrooms, laboratories, faculty cabins, and campus facilities.</p>
+              <div class="project-card-tech">Tech Stack: <span>Flutter, Firebase, Google Maps API</span></div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card" data-domains="ai,mobile" data-year="2026">
+            <div class="project-card-img">
+              <img src="assets/images/Projects_page1_img11.png" alt="Mental Wellness Application screen showing mood graphs">
+            </div>
+            <div class="project-card-body">
+              <h2 class="project-card-title">Mental Wellness Companion</h2>
+              <p class="project-card-desc">An AI-driven platform offering wellness resources, mood tracking, and personalized recommendations to support student mental health.</p>
+              <div class="project-card-tech">Tech Stack: <span>Flutter, Firebase, AI Models</span></div>
+            </div>
+          </div>
+
+          <div id="no-projects-message" style="display: none; text-align: center; padding: 40px; color: var(--text-dark-secondary);">
+            No projects match the selected filters.
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Project Search & Filter Engine
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('project-search');
+      const domainBtns = document.querySelectorAll('#domain-filters .filter-btn');
+      const yearBtns = document.querySelectorAll('#year-filters .filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      const noProjectsMsg = document.getElementById('no-projects-message');
+
+      let activeDomain = 'all';
+      let activeYear = 'all';
+      let searchQuery = '';
+
+      function filterProjects() {
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+          const domains = card.getAttribute('data-domains').split(',');
+          const year = card.getAttribute('data-year');
+          const title = card.querySelector('.project-card-title').innerText.toLowerCase();
+          const desc = card.querySelector('.project-card-desc').innerText.toLowerCase();
+
+          const matchesDomain = activeDomain === 'all' || domains.includes(activeDomain);
+          const matchesYear = activeYear === 'all' || year === activeYear;
+          const matchesSearch = title.includes(searchQuery) || desc.includes(searchQuery);
+
+          if (matchesDomain && matchesYear && matchesSearch) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          noProjectsMsg.style.display = 'block';
+        } else {
+          noProjectsMsg.style.display = 'none';
+        }
+      }
+
+      // Search event
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterProjects();
+        });
+      }
+
+      // Domain filter buttons
+      domainBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          domainBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeDomain = btn.getAttribute('data-filter');
+          filterProjects();
+        });
+      });
+
+      // Year filter buttons
+      yearBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          yearBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeYear = btn.getAttribute('data-filter');
+          filterProjects();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

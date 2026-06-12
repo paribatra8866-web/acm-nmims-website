@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join ACM - ACM NMIMS Indore</title>
+  <meta name="description" content="Discover the benefits of ACM membership, FAQ answers, and how you can join the computing community.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Split Unique section layout */
+    .unique-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .unique-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .unique-content {
+      background-color: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+    }
+
+    /* FAQ accordion styling */
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .faq-image-wrapper {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+      background-color: #bce6f6;
+      color: var(--text-light-primary);
+    }
+
+    .faq-trigger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      color: var(--text-light-primary);
+      transition: var(--transition);
+    }
+
+    .faq-trigger svg {
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .faq-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 0 32px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .faq-panel p {
+      padding: 20px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-light-secondary);
+    }
+
+    /* Open FAQ Item styles */
+    .faq-item.active {
+      background-color: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      color: var(--text-dark-primary);
+    }
+
+    .faq-item.active .faq-trigger {
+      color: var(--text-dark-primary);
+    }
+
+    .faq-item.active .faq-trigger svg {
+      transform: rotate(45deg);
+      color: var(--accent-cyan);
+    }
+
+    .faq-item.active .faq-panel {
+      max-height: 200px;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .faq-item.active .faq-panel p {
+      color: var(--text-dark-secondary);
+    }
+
+    @media (max-width: 1024px) {
+      .unique-layout, .faq-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero animate-fade-in" style="background-image: url('assets/images/Membership_page1_img5.png');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Join ACM</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Than a Membership section -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag" style="color: var(--accent-blue);">Membership</span>
+        <h2 class="section-title" style="color: var(--text-light-primary);">More Than a Membership</h2>
+      </div>
+
+      <div class="card-grid-3 animate-fade-in">
+        <!-- Exclusive Experiences -->
+        <div class="card card-light" style="padding: 40px 32px;">
+          <h3 class="section-title" style="font-size: 22px; text-transform: uppercase; margin-bottom: 24px; color: var(--text-light-primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">Exclusive Experiences</h3>
+          <ul class="dash-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Technical Workshops
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Hackathons & Competitions
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Industry Speaker Sessions
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Networking Events
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Special Chapter Initiatives
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opportunities to Contribute -->
+        <div class="card card-dark" style="padding: 40px 32px;">
+          <h3 class="section-title" style="font-size: 22px; text-transform: uppercase; margin-bottom: 24px; color: var(--text-dark-primary); border-bottom: 2px solid rgba(255, 255, 255, 0.05); padding-bottom: 12px;">Opportunities to Contribute</h3>
+          <ul class="dash-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Organize Events
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Join Core Committees
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Lead Initiatives
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Collaborate on Projects
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Support Community Activities
+            </li>
+          </ul>
+        </div>
+
+        <!-- Innovators' Community -->
+        <div class="card card-light" style="padding: 40px 32px;">
+          <h3 class="section-title" style="font-size: 22px; text-transform: uppercase; margin-bottom: 24px; color: var(--text-light-primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">Innovators' Community</h3>
+          <ul class="dash-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Connect with Like-Minded Peers
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Share Ideas & Knowledge
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Build Meaningful Relationships
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Learn Through Collaboration
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Grow Together as a Community
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unique Culture Split Layout Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="unique-layout animate-fade-in">
+        <div class="unique-img">
+          <img src="assets/images/Membership_page1_img6.png" alt="ACM Indore group presentation">
+        </div>
+        <div class="unique-content">
+          <span class="section-tag">Beyond the Classroom</span>
+          <h2 class="section-title" style="font-size: 36px; margin-bottom: 20px;">What Makes ACM Unique?</h2>
+          <ul class="checklist" style="margin-bottom: 24px;">
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Student-Driven Culture
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Interdisciplinary Collaboration
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Innovation-Focused Environment
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Strong Peer Learning Network
+            </li>
+          </ul>
+          <p style="color: var(--text-dark-secondary); font-size: 15px; line-height: 1.7;">ACM provides an environment where students can explore interests, exchange ideas, and contribute to a culture of innovation. Through shared experiences and collaborative learning, members develop skills and perspectives that extend far beyond academics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-light">
+    <div class="container">
+      <div class="faq-layout">
+        <!-- Left Title -->
+        <div>
+          <span class="section-tag" style="color: var(--accent-blue);">FAQ</span>
+          <h2 class="section-title" style="color: var(--text-light-primary); font-size: 40px;">We Answer Your Most Asked Questions</h2>
+          <div class="faq-image-wrapper" style="margin-top: 32px;">
+            <img src="assets/images/Membership_page1_img7.png" alt="Two people talking/discussing">
+          </div>
+        </div>
+
+        <!-- Right Accordions -->
+        <div class="faq-container animate-fade-in">
+          <!-- Accordion 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              Do I need prior technical experience?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="faq-panel">
+              <p>No. ACM welcomes beginners as well as experienced learners.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              Who can join ACM?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="faq-panel">
+              <p>ACM is open to all students interested in computing, engineering, or related technology disciplines at NMIMS.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              How can I participate in ACM events?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="faq-panel">
+              <p>You can register for our workshops and hackathons on our portal or through registration links shared on our social media channels.</p>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              Are leadership opportunities available?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Yes, we recruit core committee members annually, offering leadership roles to manage events, developer teams, and marketing channels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // FAQ Accordion script logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        trigger.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all FAQ items
+          faqItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-panel').style.maxHeight = null;
+          });
+
+          // If clicked item was not active, open it
+          if (!isActive) {
+            item.classList.add('active');
+            const panel = item.querySelector('.faq-panel');
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

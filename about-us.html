@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ACM NMIMS Indore</title>
+  <meta name="description" content="Learn about our journey of innovation, active student community, and our mission & vision at ACM NMIMS Indore.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Journey Grid styling */
+    .journey-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .journey-images-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .journey-thumb {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+
+    .journey-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .journey-main-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Active Members card */
+    .members-stats-card {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: #cffafe;
+      border-radius: var(--radius-md);
+      padding: 24px 32px;
+      margin-top: 40px;
+      color: var(--text-light-primary);
+    }
+
+    .members-value {
+      font-family: var(--font-heading);
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--accent-blue);
+      line-height: 1;
+    }
+
+    .members-text {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-light-secondary);
+      line-height: 1.4;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .pillar-card {
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .pillar-icon-wrapper {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--accent-cyan);
+    }
+
+    .pillar-card h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pillar-card p {
+      font-size: 14px;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+    }
+
+    /* Purpose Mission/Vision styling */
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .purpose-card {
+      background-color: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      position: relative;
+    }
+
+    .purpose-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 32px;
+      background-color: var(--accent-blue);
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .purpose-card:first-child::before {
+      background-color: var(--accent-blue);
+    }
+
+    .purpose-card:last-child::before {
+      background-color: var(--accent-cyan);
+    }
+
+    .purpose-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .purpose-icon {
+      color: var(--accent-cyan);
+    }
+
+    .purpose-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .purpose-card p {
+      font-size: 15px;
+      color: var(--text-dark-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1024px) {
+      .journey-grid, .purpose-grid {
+        grid-template-columns: 1fr;
+      }
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .members-stats-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+      }
+      .purpose-card {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero animate-fade-in" style="background-image: url('assets/images/About-Us_page1_img9.png');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">About Us</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="journey-grid">
+        <div>
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">Our Journey of Innovation and Growth</h2>
+          <p class="section-desc">ACM NMIMS Indore is a student-led chapter dedicated to fostering technical excellence, innovation, and professional growth. Over the years, the chapter has evolved into a vibrant community where students collaborate on projects, participate in workshops, engage with industry experts, and contribute to meaningful technological initiatives.</p>
+          <p class="section-desc" style="margin-top: -24px;">Through events, competitions, research opportunities, and leadership experiences, ACM continues to empower students to learn, build, and lead in an ever-evolving digital world.</p>
+          
+          <div class="journey-images-row">
+            <div class="journey-thumb">
+              <img src="assets/images/About-Us_page1_img5.png" alt="VR Headset Experiment">
+            </div>
+            <div class="journey-thumb">
+              <img src="assets/images/About-Us_page1_img6.png" alt="Students Working in Class">
+            </div>
+            <div class="journey-thumb">
+              <img src="assets/images/About-Us_page1_img14.png" alt="Student Presentation">
+            </div>
+          </div>
+
+          <div class="members-stats-card">
+            <div class="members-value">340+</div>
+            <div class="members-text">Active Members<br>A growing community united by curiosity, innovation, and a passion for technology.</div>
+          </div>
+        </div>
+        <div class="journey-main-img">
+          <img src="assets/images/About-Us_page1_img12.png" alt="ACM Indore Group Photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars / Core Values Section -->
+  <section class="section-dark" style="border-top: 1px solid var(--border-dark);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">What Defines ACM NMIMS Indore?</h2>
+        <p class="section-desc" style="margin: 0 auto;">ACM provides students with opportunities to explore emerging technologies, develop practical skills, collaborate on impactful projects, and become part of a global computing community.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card card card-dark">
+          <div class="pillar-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"></path><path d="M9 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"></path></svg>
+          </div>
+          <h3>Technical Learning</h3>
+          <p>Hands-on workshops, coding sessions, hackathons, and skill-building initiatives.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card card card-dark">
+          <div class="pillar-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+          </div>
+          <h3>Innovation & Projects</h3>
+          <p>Collaborative projects, research opportunities, and real-world problem solving.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card card card-dark">
+          <div class="pillar-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Leadership & Community</h3>
+          <p>Leadership roles, networking opportunities, and a culture of continuous growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag" style="color: var(--accent-blue);">Our Purpose</span>
+        <h2 class="section-title" style="color: var(--text-light-primary);">Mission & Vision</h2>
+      </div>
+
+      <div class="purpose-grid">
+        <!-- Mission Card -->
+        <div class="purpose-card">
+          <div class="purpose-header">
+            <svg class="purpose-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+            <h3>Our Mission</h3>
+          </div>
+          <p>To foster technical excellence, innovation, and collaborative learning by providing students with opportunities to explore emerging technologies, develop practical skills, and contribute to impactful projects.</p>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="purpose-card">
+          <div class="purpose-header">
+            <svg class="purpose-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+            <h3>Our Vision</h3>
+          </div>
+          <p>To build a thriving community of future technology leaders who drive innovation, embrace lifelong learning, and create meaningful impact through computing and technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

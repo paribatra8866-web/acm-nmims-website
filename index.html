@@ -3,1348 +3,1056 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Page</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACM NMIMS Indore</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css">
-  <style id="sections-styles">
-/* CSS for section section:Hero */
-.hero-section {
-  position: relative;
-  background-image: url('images/1e2fa39d3586a063eca9a0ffed9debd370127e8b.png');
-  background-size: cover;
-  background-position: center;
-  min-height: 860px;
-  border-radius: 30px;
-  margin: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-bg-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 47.6%, rgba(0, 0, 0, 0.2) 100%);
-  z-index: 1;
-}
-
-.site-header {
-  position: relative;
-  z-index: 2;
-  padding: 30px 0;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.main-nav {
-  position: relative;
-  padding: 10px 30px;
-  border-radius: 60px;
-}
-
-.nav-bg {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(62, 131, 221, 0.46);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 60px;
-  backdrop-filter: blur(1px);
-  z-index: -1;
-}
-
-.nav-list {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.nav-list a {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  padding-bottom: 60px;
-}
-
-.hero-body {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-}
-
-.hero-title {
-  color: #ffffff;
-  font-size: clamp(48px, 6vw, 80px);
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  margin: 0;
-}
-
-.hero-text-box {
-  max-width: 400px;
-}
-
-.hero-desc {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 992px) {
-  .hero-body {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .hero-text-box {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-nav {
-    display: none; /* Simplified for mobile, would normally have a hamburger menu */
-  }
-  .header-container {
-    justify-content: center;
-  }
-  .header-btn {
-    display: none;
-  }
-}
-
-/* CSS for section section:About */
-.about-section {
-  position: relative;
-  padding: 100px 0;
-  overflow: hidden;
-}
-
-.bg-svg-about {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: -1;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.about-container {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-content {
-  flex: 1;
-  max-width: 600px;
-}
-
-.about-desc {
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.about-image {
-  flex: 1;
-  width: 100%;
-  max-width: 600px;
-}
-
-.about-image img {
-  border-radius: 30px;
-  width: 100%;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-@media (min-width: 992px) {
-  .about-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* CSS for section section:Featured */
-.featured-section {
-  background-color: rgba(181, 227, 239, 0.48);
-  padding: 100px 0;
-  border-radius: 30px;
-  margin: 0 20px;
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.featured-card {
-  background-color: #ffffff;
-  border-radius: 24px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.card-img-wrapper {
-  width: 100%;
-  height: 240px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-title {
-  font-size: 24px;
-  color: var(--dark-blue);
-  margin-bottom: 15px;
-}
-
-.card-desc {
-  font-size: 15px;
-  color: var(--text-dark);
-}
-
-/* CSS for section section:WhyChoose */
-.why-choose-section {
-  background-color: var(--dark-blue);
-  border-radius: 30px;
-  margin: 100px 20px;
-  overflow: hidden;
-}
-
-.why-choose-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-.why-choose-image {
-  width: 100%;
-}
-
-.why-choose-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 30px;
-}
-
-.why-choose-content {
-  padding: 60px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature-list {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.feature-list li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.check-icon {
-  width: 22px;
-  height: 22px;
-}
-
-.feature-desc {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-@media (min-width: 992px) {
-  .why-choose-container {
-    flex-direction: row;
-  }
-  .why-choose-image {
-    width: 50%;
-  }
-  .why-choose-content {
-    width: 50%;
-    padding: 80px 60px;
-  }
-}
-
-/* CSS for section section:Offers */
-.offers-section {
-  padding: 100px 0;
-}
-
-.offers-header {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.offers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-}
-
-.offer-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.offer-icon-box {
-  width: 100px;
-  height: 100px;
-  background-color: var(--dark-blue);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.offer-divider {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(2, 20, 33, 0.15);
-  border: none;
-  margin: 0 0 30px 0;
-}
-
-.offer-title {
-  font-size: 32px;
-  color: var(--dark-blue);
-  margin-bottom: 20px;
-}
-
-.offer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.offer-list li {
-  font-size: 16px;
-  color: var(--text-dark);
-}
-
-@media (min-width: 768px) {
-  .offers-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .offers-header-left {
-    flex: 1;
-  }
-  .offers-header-right {
-    flex: 1;
-    max-width: 400px;
-  }
-}
-
-/* CSS for section section:Upcoming */
-.upcoming-section {
-  position: relative;
-  padding: 100px 0;
-}
-
-.bg-svg-upcoming {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  z-index: -1;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.upcoming-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 50px;
-}
-
-.upcoming-card {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 300px;
-}
-
-.upcoming-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.upcoming-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
-  z-index: 2;
-}
-
-.upcoming-content {
-  position: relative;
-  z-index: 3;
-  padding: 30px;
-}
-
-.upcoming-title {
-  color: #ffffff;
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.upcoming-date {
-  color: #ffffff;
-  font-size: 16px;
-  margin: 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-@media (min-width: 768px) {
-  .upcoming-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .upcoming-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
-  }
-  .card-large {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    min-height: auto;
-  }
-  .card-wide {
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
-    min-height: auto;
-  }
-  .card-small {
-    min-height: auto;
-  }
-}
-
-/* CSS for section section:Timeline */
-.timeline-section {
-  background-color: var(--dark-blue);
-  padding: 100px 0;
-  border-radius: 30px;
-  margin: 0 20px;
-}
-
-.timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.timeline-card {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-}
-
-.timeline-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.timeline-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-  z-index: 2;
-}
-
-.timeline-content {
-  position: relative;
-  z-index: 3;
-  padding: 40px 20px;
-}
-
-.timeline-year {
-  color: #ffffff;
-  font-size: 32px;
-  margin-bottom: 10px;
-  -webkit-text-stroke: 1px #000;
-}
-
-.timeline-desc {
-  color: #ffffff;
-  font-size: 18px;
-  margin: 0;
-}
-
-/* CSS for section section:Impact */
-.impact-section {
-  background-color: rgba(181, 227, 239, 0.48);
-  padding: 100px 0;
-  border-radius: 30px;
-  margin: 20px;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.impact-card {
-  background-color: #ffffff;
-  border-radius: 24px;
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-dark {
-  background-color: var(--dark-blue);
-}
-
-.impact-label {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.impact-stat {
-  font-size: 48px;
-  color: var(--dark-blue);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.impact-stat-desc {
-  font-size: 24px;
-  font-family: var(--font-heading);
-}
-
-.impact-divider {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(2, 20, 33, 0.15);
-  border: none;
-  margin: 0 0 30px 0;
-}
-
-.impact-divider.border-dark {
-  background-color: #021421; /* Based on design, it might be a darker line or just solid */
-  border: 1px solid #021421;
-}
-
-.impact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  flex-grow: 1;
-}
-
-.impact-list li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 16px;
-  color: var(--dark-blue);
-}
-
-.impact-list.text-white li {
-  color: #ffffff;
-}
-
-/* CSS for section section:Join */
-.join-section {
-  position: relative;
-  background-image: url('images/59181d2025344b6263c9351d82a9d69cfdf702b4.png');
-  background-size: cover;
-  background-position: center;
-  min-height: 780px;
-  border-radius: 30px;
-  margin: 20px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.join-bg-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.7) 26%, rgba(0,0,0,0) 77%);
-  z-index: 1;
-}
-
-.join-container {
-  position: relative;
-  z-index: 2;
-}
-
-.join-content {
-  max-width: 600px;
-}
-
-.join-title {
-  color: #ffffff;
-  font-size: clamp(40px, 5vw, 64px);
-  margin-bottom: 30px;
-  text-shadow: 4px 4px 4px rgba(0,0,0,0.5);
-}
-
-.join-desc {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px 4px rgba(26, 115, 232, 0.5);
-}
-
-.join-buttons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* CSS for section section:RecentPosts */
-.recent-posts-section {
-  padding: 100px 0;
-}
-
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.post-card {
-  background-color: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.post-img-wrapper {
-  background-color: #eaeaeb;
-  padding: 16px;
-  border-radius: 16px;
-  margin: 16px;
-}
-
-.post-img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.post-content {
-  padding: 0 30px 30px;
-}
-
-.post-date {
-  color: var(--accent-blue);
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.post-title {
-  font-size: 28px;
-  color: #181d23;
-  margin: 0;
-}
-
-/* CSS for section section:Footer */
-.site-footer {
-  background-color: var(--dark-blue);
-  color: #ffffff;
-  padding: 100px 0 40px;
-  border-radius: 30px;
-  margin: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.bg-svg-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  position: relative;
-  z-index: 1;
-}
-
-.footer-desc {
-  font-size: 16px;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-contact li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.footer-title {
-  font-size: 20px;
-  margin-bottom: 25px;
-  color: #ffffff;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-links a {
-  font-size: 14px;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.footer-links a:hover {
-  opacity: 1;
-}
-
-.footer-newsletter-desc {
-  font-size: 14px;
-  margin-bottom: 20px;
-  opacity: 0.8;
-}
-
-.newsletter-form {
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 5px;
-  margin-bottom: 30px;
-}
-
-.newsletter-input {
-  flex-grow: 1;
-  border: none;
-  padding: 10px 15px;
-  background: transparent;
-  outline: none;
-  font-family: var(--font-body);
-}
-
-.newsletter-btn {
-  background-color: #ffffff;
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-bottom {
-  margin-top: 80px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  z-index: 1;
-}
-
-.footer-bottom p {
-  margin: 0;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-@media (min-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  }
-}
+  <title>ACM NMIMS Indore - Two Years of Innovation</title>
+  <meta name="description" content="Welcome to ACM NMIMS Indore's official digital archive and showcase platform. Celebrating two years of innovation and digital legacy.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Unique Home Page Styles */
+    .hero-home {
+      height: 100vh;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-image: url('assets/images/Home_page1_img1.png');
+      background-size: cover;
+      background-position: center;
+      padding-top: 100px;
+    }
+
+    .hero-home::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0.4) 0%, rgba(4, 13, 22, 0.95) 100%);
+    }
+
+    .hero-home .container {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 64px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: var(--text-dark-primary);
+    }
+
+    .hero-card {
+      background: rgba(8, 22, 37, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .hero-card h2 {
+      font-size: 20px;
+      color: var(--text-dark-primary);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .hero-card p {
+      font-size: 15px;
+      color: var(--text-dark-secondary);
+      margin-bottom: 24px;
+    }
+
+    .hero-card-btns {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* About Section Home */
+    .about-home-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-home-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Features Grid "Why Choose ACM" */
+    .choose-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .choose-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .choose-content {
+      background-color: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 24px 0;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .checklist-item svg {
+      color: var(--accent-cyan);
+    }
+
+    /* Offers Section */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .offer-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      color: var(--text-light-primary);
+    }
+
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .offer-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      background-color: #f0f7fb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--accent-blue);
+    }
+
+    .offer-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .offer-card ul {
+      list-style: none;
+      color: var(--text-light-secondary);
+      font-size: 15px;
+    }
+
+    .offer-card ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Upcoming Events */
+    .events-home-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .event-home-card {
+      position: relative;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .event-home-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .event-home-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0) 40%, rgba(4, 13, 22, 0.9) 100%);
+    }
+
+    .event-home-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .event-home-content {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      z-index: 10;
+    }
+
+    .event-home-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .event-home-content p {
+      font-size: 13px;
+      color: var(--accent-cyan);
+      font-weight: 500;
+    }
+
+    /* Timeline Section */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .timeline-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 250px;
+    }
+
+    .timeline-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .timeline-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0.2) 0%, rgba(4, 13, 22, 0.85) 100%);
+    }
+
+    .timeline-content {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      z-index: 10;
+    }
+
+    .timeline-year {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .timeline-desc {
+      font-size: 14px;
+      color: var(--text-dark-secondary);
+    }
+
+    /* Dashboard Panels */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .dash-panel {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-light-primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 480px;
+    }
+
+    .dash-header {
+      margin-bottom: 24px;
+    }
+
+    .dash-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light-secondary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .dash-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-light-primary);
+      margin-bottom: 20px;
+    }
+
+    .dash-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .dash-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-light-secondary);
+      margin-bottom: 12px;
+    }
+
+    .dash-list li svg {
+      color: var(--accent-blue);
+      flex-shrink: 0;
+    }
+
+    .dash-panel .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* CTA Join Club Banner */
+    .cta-banner {
+      background-image: url('assets/images/Home_page1_img29.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 40px;
+      padding: 100px 60px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 16px;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(4, 13, 22, 0.95) 0%, rgba(4, 13, 22, 0.6) 100%);
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+    }
+
+    .cta-content h2 {
+      font-size: 48px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cta-content p {
+      font-size: 16px;
+      color: var(--text-dark-secondary);
+      margin-bottom: 32px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* Blog cards home */
+    .blog-home-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+
+    .blog-home-card {
+      border-radius: var(--radius-lg);
+      background-color: white;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-light-primary);
+    }
+
+    .blog-home-img {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .blog-home-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-home-body {
+      padding: 24px;
+    }
+
+    .blog-home-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .blog-home-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .blog-home-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .blog-btn-container {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* Responsiveness overrides */
+    @media (max-width: 1024px) {
+      .hero-home .container {
+        grid-template-columns: 1fr;
+      }
+      .events-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline-card {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 40px;
+      }
+      .about-home-grid, .choose-grid, .offers-grid, .dashboard-grid, .blog-home-grid {
+        grid-template-columns: 1fr;
+      }
+      .events-home-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-banner {
+        padding: 60px 24px;
+      }
+      .cta-content h2 {
+        font-size: 32px;
+      }
+      .cta-btns {
+        flex-direction: column;
+      }
+    }
   </style>
-  <script src="global.js" defer></script>
 </head>
 <body>
-<section id="section-hero" class="hero-section">
-  <div class="hero-bg-overlay"></div>
-  
-  <header class="site-header">
-    <div class="container header-container">
-      <a href="#" class="logo">
-        <img src="images/8d2882d5493a7469e9303ea0fe191be4ab926729.png" alt="ACM Logo">
-      </a>
-      
-      <nav class="main-nav">
-        <div class="nav-bg"></div>
-        <ul class="nav-list">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">EVENTS</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">TEAM</a></li>
-        </ul>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
       </nav>
-      
-      <a href="#" class="btn btn-light header-btn">
-        JOIN ACM 
-        <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-      </a>
     </div>
   </header>
 
-  <div class="container hero-content">
-    <div class="hero-body">
-      <h1 class="hero-title">TWO YEARS OF<br>INNOVATION.<br>ONE DIGITAL<br>LEGACY.</h1>
-      
-      <div class="hero-text-box">
-        <p class="hero-desc">Welcome to ACM NMIMS Indore's official digital archive and showcase platform. Empowering technical excellence, impactful innovation, and a global legacy.</p>
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-light">
-            CONTACT US 
-            <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
+  <!-- Hero Section -->
+  <section class="hero-home">
+    <div class="container animate-fade-in">
+      <div>
+        <h1 class="hero-title">“Two Years of<br>Innovation.<br>One Digital<br>Legacy.”</h1>
+      </div>
+      <div class="hero-card">
+        <h2>Welcome to ACM NMIMS Indore</h2>
+        <p>Welcome to ACM NMIMS Indore's official digital archive and showcase platform. Empowering technical excellence, impactful innovation, and a global legacy.</p>
+        <div class="hero-card-btns">
+          <a href="contact.html" class="btn btn-primary">
+            Contact Us
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
           </a>
-          <a href="#" class="btn btn-white">
-            LEARN MORE 
-            <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
+          <a href="about-us.html" class="btn btn-secondary">
+            Learn More
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
           </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="section-about" class="about-section">
-  <img src="images/1_408.svg" class="bg-svg-about" alt="">
-  
-  <div class="container about-container">
-    <div class="about-content">
-      <span class="section-label">ABOUT US</span>
-      <h2 class="section-title">ACM NMIMS INDORE</h2>
-      <p class="about-desc">Founded to foster technical excellence and innovation, ACM NMIMS Indore has grown into a vibrant community of developers, researchers, designers, and technology enthusiasts.</p>
-      <p class="about-desc">Over the past two years, the chapter has hosted workshops, hackathons, speaker sessions, and collaborative projects that have impacted hundreds of students.</p>
-      <a href="#" class="btn btn-light mt-40">
-        Learn more 
-        <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-      </a>
-    </div>
-    <div class="about-image">
-      <img src="images/b31869278019051316dd5f74d8a2dfa505bf3e46.png" alt="About ACM NMIMS Indore">
-    </div>
-  </div>
-</section>
-<section id="section-featured" class="featured-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <h2 class="section-title">Featured Events & Projects</h2>
-      <p class="section-subtitle">Explore our top workshops, hackathons, and technology projects that defined ACM NMIMS Indore's journey in AI, Web, IoT, and research during 2024–2026.</p>
-    </div>
-    
-    <div class="featured-grid">
-      <div class="featured-card">
-        <div class="card-img-wrapper">
-          <img src="images/f851601410983bf884eeaa1fc733c3e658897459.png" alt="ACM-W Launch" class="card-img">
+  </section>
+
+  <!-- About Us Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="about-home-grid">
+        <div>
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">ACM NMIMS Indore</h2>
+          <p class="section-desc">Founded to foster technical excellence and innovation, ACM NMIMS Indore has grown into a vibrant community of developers, researchers, designers, and technology enthusiasts.</p>
+          <p class="section-desc" style="margin-top: -24px;">Over the past two years, the chapter has hosted workshops, hackathons, speaker sessions, and collaborative projects that have impacted hundreds of students.</p>
+          <a href="about-us.html" class="btn btn-primary">
+            Learn More
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+          </a>
         </div>
-        <div class="card-content">
-          <h3 class="card-title">ACM-W Launch</h3>
-          <p class="card-desc">Empowering women through inclusion, leadership, and growth opportunities.</p>
-        </div>
-      </div>
-      
-      <div class="featured-card">
-        <div class="card-img-wrapper">
-          <img src="images/6913a5ff35c12b20f46ddb8f13af16a938a5d788.png" alt="TechJenga" class="card-img">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">TechJenga</h3>
-          <p class="card-desc">Encouraging creative problem-solving through engaging challenges.</p>
-        </div>
-      </div>
-      
-      <div class="featured-card">
-        <div class="card-img-wrapper">
-          <img src="images/b74d2e65c74c326ffe2df30f72d13a0d3386bbf2.png" alt="ACM India Summit 2025" class="card-img">
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">ACM India Summit 2025</h3>
-          <p class="card-desc">Connecting students with national ACM initiatives and industry insights.</p>
+        <div class="about-home-img">
+          <img src="assets/images/Home_page1_img12.png" alt="Students in Classroom">
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="section-why-choose" class="why-choose-section">
-  <div class="container why-choose-container">
-    <div class="why-choose-image">
-      <img src="images/fd904b03b677e1a871e2459cab1a1a9500305e5a.png" alt="Why Students Choose ACM">
-    </div>
-    
-    <div class="why-choose-content">
-      <span class="section-label text-white">Features</span>
-      <h2 class="section-title text-white">Why Students Choose ACM</h2>
-      
-      <ul class="feature-list">
-        <li>
-          <img src="images/1_46.svg" alt="check" class="check-icon">
-          <span>Technical Workshops</span>
-        </li>
-        <li>
-          <img src="images/1_50.svg" alt="check" class="check-icon">
-          <span>Networking Opportunities & Industry Exposure</span>
-        </li>
-        <li>
-          <img src="images/1_54.svg" alt="check" class="check-icon">
-          <span>Global ACM Community</span>
-        </li>
-        <li>
-          <img src="images/1_58.svg" alt="check" class="check-icon">
-          <span>Leadership Development</span>
-        </li>
-      </ul>
-      
-      <p class="feature-desc text-white">Everything is designed to make your experience smooth, social, and unforgettable.</p>
-      
-      <a href="#" class="btn btn-light mt-40">
-        BECOME A MEMBER 
-        <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-      </a>
-    </div>
-  </div>
-</section>
-<section id="section-offers" class="offers-section">
-  <div class="container">
-    <div class="offers-header">
-      <div class="offers-header-left">
-        <span class="section-label">Why Choose Us</span>
-        <h2 class="section-title">What ACM Offers</h2>
+  </section>
+
+  <!-- Featured Events & Projects Section -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag" style="color: var(--accent-blue);">Highlights</span>
+        <h2 class="section-title" style="color: var(--text-light-primary);">Featured Events & Projects</h2>
+        <p class="section-desc" style="color: var(--text-light-secondary); margin: 0 auto;">Explore our top workshops, hackathons, and technology projects that defined ACM NMIMS Indore's journey in AI, Web, IoT, and research during 2024–2026.</p>
       </div>
-      <div class="offers-header-right">
-        <p class="section-subtitle" style="margin:0;">Fostering technical excellence, innovation, and leadership for the next generation of computing professionals.</p>
-      </div>
-    </div>
-    
-    <div class="offers-grid">
-      <div class="offer-card">
-        <div class="offer-icon-box">
-          <!--merged image-->
-          <div style="position: relative; width: 72px; height: 71px;">
-            <img src="images/1_73.svg" style="position: absolute; top:0; left:0; width:100%; height:100%;" alt="">
-            <img src="images/1_76.svg" style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);" alt="">
+
+      <div class="card-grid-3">
+        <!-- Card 1 -->
+        <div class="card card-light">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img4.png" alt="ACM-W Launch Event">
+          </div>
+          <div class="blog-home-body">
+            <h3 class="blog-home-title" style="font-size: 18px; margin-bottom: 8px;">ACM-W Launch</h3>
+            <p style="color: var(--text-light-secondary); font-size: 14px;">Empowering women through inclusion, leadership, and growth opportunities.</p>
           </div>
         </div>
-        <hr class="offer-divider">
-        <h3 class="offer-title">learn</h3>
-        <ul class="offer-list">
-          <li>Workshops</li>
-          <li>Certifications</li>
-          <li>Guest Lectures</li>
-        </ul>
-      </div>
-      
-      <div class="offer-card">
-        <div class="offer-icon-box">
-          <!--merged image-->
-          <div style="position: relative; width: 61px; height: 70px;">
-            <img src="images/1_86.svg" style="position: absolute; top:0; left:0; width:100%; height:100%;" alt="">
-            <img src="images/1_82.svg" style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);" alt="">
+
+        <!-- Card 2 -->
+        <div class="card card-light">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img12.png" alt="TechJenga Challenge">
+          </div>
+          <div class="blog-home-body">
+            <h3 class="blog-home-title" style="font-size: 18px; margin-bottom: 8px;">TechJenga</h3>
+            <p style="color: var(--text-light-secondary); font-size: 14px;">Encouraging creative problem solving through engaging challenges.</p>
           </div>
         </div>
-        <hr class="offer-divider">
-        <h3 class="offer-title">build</h3>
-        <ul class="offer-list">
-          <li>Projects</li>
-          <li>Hackathons</li>
-          <li>Open Source</li>
-        </ul>
-      </div>
-      
-      <div class="offer-card">
-        <div class="offer-icon-box">
-          <img src="images/1_96.svg" alt="Lead Icon" style="width: 62px; height: 68px;">
-        </div>
-        <hr class="offer-divider">
-        <h3 class="offer-title">lead</h3>
-        <ul class="offer-list">
-          <li>Chapter Leadership</li>
-          <li>Event Management</li>
-          <li>Community Impact</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="section-upcoming" class="upcoming-section">
-  <img src="images/1_385.svg" class="bg-svg-upcoming" alt="">
-  
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-label">Upcoming Events</span>
-      <h2 class="section-title">Be Part of Our Thrilling Upcoming Events</h2>
-    </div>
-    
-    <div class="upcoming-grid">
-      <div class="upcoming-card card-large">
-        <img src="images/25f1d1235a706be02337646841ffe1c3e5abc9ea.png" alt="AI Workshop Series" class="upcoming-bg">
-        <div class="upcoming-overlay"></div>
-        <div class="upcoming-content">
-          <h3 class="upcoming-title">AI Workshop Series</h3>
-          <p class="upcoming-date">June 28–30, 2026</p>
-        </div>
-      </div>
-      
-      <div class="upcoming-card card-wide">
-        <img src="images/49d2701a531fa5c1f7dc8d2e6606453d5b234426.png" alt="Research Symposium" class="upcoming-bg">
-        <div class="upcoming-overlay"></div>
-        <div class="upcoming-content">
-          <h3 class="upcoming-title">Research Symposium</h3>
-          <p class="upcoming-date">June 28–30, 2026</p>
-        </div>
-      </div>
-      
-      <div class="upcoming-card card-small">
-        <img src="images/6f95451e739ae6b1ac056f582cac11988d407e6e.png" alt="Open Source Sprint" class="upcoming-bg">
-        <div class="upcoming-overlay"></div>
-        <div class="upcoming-content">
-          <h3 class="upcoming-title">Open Source Sprint</h3>
-          <p class="upcoming-date">June 10–12, 2026</p>
-        </div>
-      </div>
-      
-      <div class="upcoming-card card-small">
-        <img src="images/7b0f2eb5db7f674fe42a67d6cac72473234a5cbe.png" alt="Hackathon 2026" class="upcoming-bg">
-        <div class="upcoming-overlay"></div>
-        <div class="upcoming-content">
-          <h3 class="upcoming-title">Hackathon 2026</h3>
-          <p class="upcoming-date">June 15, 2026</p>
+
+        <!-- Card 3 -->
+        <div class="card card-light">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img9.png" alt="ACM India Summit 2025">
+          </div>
+          <div class="blog-home-body">
+            <h3 class="blog-home-title" style="font-size: 18px; margin-bottom: 8px;">ACM India Summit 2025</h3>
+            <p style="color: var(--text-light-secondary); font-size: 14px;">Connecting students with national ACM initiatives and industry insights.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="section-timeline" class="timeline-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-label text-light-blue">CHAPTER TIMELINE</span>
-      <h2 class="section-title text-white">Our Journey So Far</h2>
-    </div>
-    
-    <div class="timeline-grid">
-      <div class="timeline-card">
-        <img src="images/967c4aca2d52d2d6723c4f1747ebd220540c2ec2.png" alt="2024 Foundation" class="timeline-bg">
-        <div class="timeline-overlay"></div>
-        <div class="timeline-content">
-          <h3 class="timeline-year">2024 · Foundation</h3>
-          <p class="timeline-desc">Building the Community</p>
+  </section>
+
+  <!-- Features Grid ("Why Students Choose ACM") -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="choose-grid">
+        <div class="choose-img">
+          <img src="assets/images/Home_page1_img26.png" alt="ACM Leadership Core Team">
         </div>
-      </div>
-      
-      <div class="timeline-card">
-        <img src="images/fbb46104217a748753298cc250693c8492683820.png" alt="2025 Growth" class="timeline-bg">
-        <div class="timeline-overlay"></div>
-        <div class="timeline-content">
-          <h3 class="timeline-year">2025 · Growth</h3>
-          <p class="timeline-desc">Expanding Impact</p>
-        </div>
-      </div>
-      
-      <div class="timeline-card">
-        <img src="images/84bb21c009e7389d2c6c24c9e2a4591e5c78a9e8.png" alt="2026 Legacy" class="timeline-bg">
-        <div class="timeline-overlay"></div>
-        <div class="timeline-content">
-          <h3 class="timeline-year">2026 · Legacy</h3>
-          <p class="timeline-desc">Innovation in Action</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="section-impact" class="impact-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <h2 class="section-title">Chapter Impact<br>Dashboard</h2>
-    </div>
-    
-    <div class="impact-grid">
-      <div class="impact-card">
-        <span class="impact-label text-cyan">COMMUNITY</span>
-        <h3 class="impact-stat">340+ <span class="impact-stat-desc">MEMBERS</span></h3>
-        <hr class="impact-divider">
-        <ul class="impact-list">
-          <li><img src="images/1_148.svg" alt="check"> Growing student network</li>
-          <li><img src="images/1_152.svg" alt="check"> Cross-domain collaboration</li>
-          <li><img src="images/1_156.svg" alt="check"> Leadership opportunities</li>
-          <li><img src="images/1_160.svg" alt="check"> Peer learning environment</li>
-          <li><img src="images/1_164.svg" alt="check"> Global ACM ecosystem access</li>
-        </ul>
-        <div class="mt-40">
-          <a href="#" class="btn btn-light btn-full">
-            Explore Community 
-            <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-          </a>
-        </div>
-      </div>
-      
-      <div class="impact-card card-dark">
-        <span class="impact-label text-white">ENGAGEMENT</span>
-        <h3 class="impact-stat text-white">27+ <span class="impact-stat-desc text-white">Events & Workshops</span></h3>
-        <hr class="impact-divider border-dark">
-        <ul class="impact-list text-white">
-          <li><img src="images/1_178.svg" alt="check"> Technical workshops</li>
-          <li><img src="images/1_182.svg" alt="check"> Speaker sessions</li>
-          <li><img src="images/1_186.svg" alt="check"> Hackathons & competitions</li>
-          <li><img src="images/1_190.svg" alt="check"> Industry interactions</li>
-          <li><img src="images/1_194.svg" alt="check"> Hands-on learning experiences</li>
-        </ul>
-        <div class="mt-40">
-          <a href="#" class="btn btn-white btn-full">
-            View Events 
-            <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-          </a>
-        </div>
-      </div>
-      
-      <div class="impact-card">
-        <span class="impact-label text-cyan">EXCELLENCE</span>
-        <h3 class="impact-stat">9+ <span class="impact-stat-desc">Awards & Recognitions</span></h3>
-        <hr class="impact-divider">
-        <ul class="impact-list">
-          <li><img src="images/1_207.svg" alt="check"> Competition achievements</li>
-          <li><img src="images/1_211.svg" alt="check"> Chapter milestones</li>
-          <li><img src="images/1_215.svg" alt="check"> Technical project showcases</li>
-          <li><img src="images/1_219.svg" alt="check"> Innovation-driven initiatives</li>
-          <li><img src="images/1_223.svg" alt="check"> Recognition of student excellence</li>
-        </ul>
-        <div class="mt-40">
-          <a href="#" class="btn btn-light btn-full">
-            See Achievements 
-            <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
+        <div class="choose-content">
+          <span class="section-tag">Features</span>
+          <h2 class="section-title">Why Students Choose ACM</h2>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Technical Workshops
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Networking Opportunities & Industry Exposure
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Global ACM Community
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Leadership Development
+            </li>
+          </ul>
+          <p style="color: var(--text-dark-secondary); margin-bottom: 24px; font-size: 15px;">Everything is designed to make your experience smooth, social, and unforgettable.</p>
+          <a href="membership.html" class="btn btn-primary">
+            Become A Member
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
           </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="section-join" class="join-section">
-  <div class="join-bg-overlay"></div>
-  <div class="container join-container">
-    <div class="join-content">
-      <h2 class="join-title">JOIN THE CLUB<br>AND START TODAY</h2>
-      <p class="join-desc">Become part of a growing community of innovators, developers, researchers, and future technology leaders.</p>
-      <div class="join-buttons">
-        <a href="#" class="btn btn-light">
-          LEARN MORE 
-          <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
+  </section>
+
+  <!-- Pillars ("What ACM Offers") -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag" style="color: var(--accent-blue);">Why Choose Us</span>
+        <h2 class="section-title" style="color: var(--text-light-primary);">What ACM Offers</h2>
+        <p class="section-desc" style="color: var(--text-light-secondary); margin: 0 auto;">Fostering technical excellence, innovation, and leadership for the next generation of computing professionals.</p>
+      </div>
+
+      <div class="offers-grid">
+        <!-- Learn Card -->
+        <div class="offer-card">
+          <div class="offer-icon-wrapper">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+          </div>
+          <h3>Learn</h3>
+          <ul>
+            <li>Workshops</li>
+            <li>Certifications</li>
+            <li>Guest Lectures</li>
+          </ul>
+        </div>
+
+        <!-- Build Card -->
+        <div class="offer-card">
+          <div class="offer-icon-wrapper">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg>
+          </div>
+          <h3>Build</h3>
+          <ul>
+            <li>Projects</li>
+            <li>Hackathons</li>
+            <li>Open Source</li>
+          </ul>
+        </div>
+
+        <!-- Lead Card -->
+        <div class="offer-card">
+          <div class="offer-icon-wrapper">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Lead</h3>
+          <ul>
+            <li>Chapter Leadership</li>
+            <li>Event Management</li>
+            <li>Community Impact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section class="section-dark">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">Upcoming Events</span>
+        <h2 class="section-title">Be Part of Our Thrilling Upcoming Events</h2>
+      </div>
+
+      <div class="events-home-grid">
+        <!-- Event 1 -->
+        <div class="event-home-card">
+          <img src="assets/images/Home_page1_img24.png" alt="Research Symposium">
+          <div class="event-home-content">
+            <h3>Research Symposium</h3>
+            <p>June 28-30, 2026</p>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-home-card">
+          <img src="assets/images/Home_page1_img25.png" alt="AI Workshop Series">
+          <div class="event-home-content">
+            <h3>AI Workshop Series</h3>
+            <p>June 28-30, 2026</p>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-home-card">
+          <img src="assets/images/Home_page1_img27.png" alt="Open Source Sprint">
+          <div class="event-home-content">
+            <h3>Open Source Sprint</h3>
+            <p>June 10–12, 2026</p>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-home-card">
+          <img src="assets/images/Home_page1_img30.png" alt="Hackathon 2026">
+          <div class="event-home-content">
+            <h3>Hackathon 2026</h3>
+            <p>June 15, 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter Timeline Section -->
+  <section class="section-dark" style="border-top: 1px solid var(--border-dark);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">Chapter Timeline</span>
+        <h2 class="section-title">Our Journey So Far</h2>
+      </div>
+
+      <div class="timeline-grid">
+        <!-- 2024 -->
+        <div class="timeline-card">
+          <img src="assets/images/Home_page1_img11.png" alt="2024 Launch">
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-title">Foundation</div>
+            <div class="timeline-desc">Building the Community</div>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-card">
+          <img src="assets/images/Home_page1_img6.png" alt="2025 Growth">
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">Growth</div>
+            <div class="timeline-desc">Expanding Impact</div>
+          </div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="timeline-card">
+          <img src="assets/images/Home_page1_img7.png" alt="2026 Legacy">
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-title">Legacy</div>
+            <div class="timeline-desc">Innovation in Action</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter Impact Dashboard Section -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h2 class="section-title" style="color: var(--text-light-primary);">Chapter Impact Dashboard</h2>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Community Panel -->
+        <div class="dash-panel">
+          <div class="dash-header">
+            <span class="dash-tag">Community</span>
+            <div class="dash-value">340+ Members</div>
+            <ul class="dash-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Growing student network
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Cross-domain collaboration
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Leadership opportunities
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Peer learning environment
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Global ACM ecosystem access
+              </li>
+            </ul>
+          </div>
+          <a href="membership.html" class="btn btn-light">
+            Explore Community
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+          </a>
+        </div>
+
+        <!-- Engagement Panel -->
+        <div class="dash-panel">
+          <div class="dash-header">
+            <span class="dash-tag">Engagement</span>
+            <div class="dash-value">27+ Events & Workshops</div>
+            <ul class="dash-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Technical workshops
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Speaker sessions
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hackathons & competitions
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Industry interactions
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hands-on learning experiences
+              </li>
+            </ul>
+          </div>
+          <a href="events.html" class="btn btn-light">
+            View Events
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+          </a>
+        </div>
+
+        <!-- Excellence Panel -->
+        <div class="dash-panel">
+          <div class="dash-header">
+            <span class="dash-tag">Excellence</span>
+            <div class="dash-value">9+ Awards & Recognitions</div>
+            <ul class="dash-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Competition achievements
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Chapter milestones
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Technical project showcases
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Innovation-driven initiatives
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Recognition of student excellence
+              </li>
+            </ul>
+          </div>
+          <a href="achievements.html" class="btn btn-light">
+            See Achievements
+            <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-dark" style="padding: 60px 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-content">
+          <h2>Join the Club<br>and Start Today</h2>
+          <p>Become part of a growing community of innovators, developers, researchers, and future technology leaders.</p>
+          <div class="cta-btns">
+            <a href="about-us.html" class="btn btn-primary">
+              Learn More
+              <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+            </a>
+            <a href="membership.html" class="btn btn-secondary" style="border-color: white; color: white;">
+              Join Us Now
+              <span class="arrow-circle" style="background-color: white; color: var(--bg-dark);"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Blog Section -->
+  <section class="section-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag" style="color: var(--accent-blue);">Recent Posts</span>
+        <h2 class="section-title" style="color: var(--text-light-primary);">Latest News & Updates</h2>
+      </div>
+
+      <div class="blog-home-grid">
+        <!-- Blog 1 -->
+        <div class="blog-home-card">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img31.png" alt="Event Highlights">
+          </div>
+          <div class="blog-home-body">
+            <span class="blog-home-date">04/06/26</span>
+            <h3 class="blog-home-title">Event Highlights</h3>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="blog-home-card">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img34.png" alt="ACM Chapter Achievements">
+          </div>
+          <div class="blog-home-body">
+            <span class="blog-home-date">04/06/26</span>
+            <h3 class="blog-home-title">ACM Chapter Achievements</h3>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="blog-home-card">
+          <div class="blog-home-img">
+            <img src="assets/images/Home_page1_img30.png" alt="Workshop Recaps">
+          </div>
+          <div class="blog-home-body">
+            <span class="blog-home-date">04/06/26</span>
+            <h3 class="blog-home-title">Workshop Recaps</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-btn-container">
+        <a href="blog.html" class="btn btn-light">
+          View All Blog
+          <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
         </a>
-        <a href="#" class="btn btn-white">
-          Join Us Now 
-          <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-        </a>
       </div>
     </div>
-  </div>
-</section>
-<section id="section-recent-posts" class="recent-posts-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="section-label">Recent Posts</span>
-      <h2 class="section-title">Latest News<br>& Updates</h2>
-    </div>
-    
-    <div class="posts-grid">
-      <div class="post-card">
-        <div class="post-img-wrapper">
-          <img src="images/42e507037eb4ddb146eae6461ad41406b82e0c63.png" alt="Event Highlights" class="post-img">
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
         </div>
-        <div class="post-content">
-          <span class="post-date">04/06/26</span>
-          <h3 class="post-title">Event<br>Highlights</h3>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
         </div>
       </div>
-      
-      <div class="post-card">
-        <div class="post-img-wrapper">
-          <img src="images/aeaa3672b5ec909132cc548f4b76dfa3e2045934.png" alt="ACM Chapter Achievements" class="post-img">
-        </div>
-        <div class="post-content">
-          <span class="post-date">04/06/26</span>
-          <h3 class="post-title">ACM Chapter<br>Achievements</h3>
-        </div>
-      </div>
-      
-      <div class="post-card">
-        <div class="post-img-wrapper">
-          <img src="images/c8d422f25795dfc4feb25a3f9353bc00199b29ac.png" alt="Workshop Recaps" class="post-img">
-        </div>
-        <div class="post-content">
-          <span class="post-date">04/06/26</span>
-          <h3 class="post-title">Workshop<br>Recaps</h3>
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center mt-40" style="margin-top: 60px;">
-      <a href="#" class="btn btn-dark">
-        View all blog 
-        <img src="images/ee227d0766d12949bd195fbb7269ee6a46c4994e.png" alt="arrow" class="btn-arrow">
-      </a>
-    </div>
-  </div>
-</section>
-<footer id="section-footer" class="site-footer">
-  <img src="images/1_431.svg" class="bg-svg-footer" alt="">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <p class="footer-desc">Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
-        <ul class="footer-contact">
-          <li><img src="images/1_273.svg" alt="icon"> Super Corridor, Bada Bangarda</li>
-          <li><img src="images/1_277.svg" alt="icon"> + 91 0731 2581500</li>
-          <li><img src="images/1_281.svg" alt="icon"> acm@nmims.edu</li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4 class="footer-title">Other Pages</h4>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Term Of Service</a></li>
-          <li><a href="#">Disclaimer</a></li>
-          <li><a href="#">Credits</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4 class="footer-title">Newsletter</h4>
-        <p class="footer-newsletter-desc">Get the latest news & updates</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Email Address" class="newsletter-input">
-          <button type="submit" class="newsletter-btn">
-            <img src="images/1_326.svg" alt="submit">
-          </button>
-        </form>
-        <div class="social-links">
-          <a href="#" class="social-icon"><img src="images/1_326.svg" alt="social"></a>
-          <a href="#" class="social-icon"><img src="images/1_329.svg" alt="social"></a>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>ACM, NMIMS INDORE</p>
-    </div>
-  </div>
-</footer>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

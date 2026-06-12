@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Team - ACM NMIMS Indore</title>
+  <meta name="description" content="Meet the leadership team and student representatives driving the ACM NMIMS Indore Student Chapter.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Team Page layout */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .team-card {
+      position: relative;
+      height: 480px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .team-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0) 50%, rgba(4, 13, 22, 0.9) 100%);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .team-card:hover::after {
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0) 40%, rgba(4, 13, 22, 0.95) 100%);
+    }
+
+    .team-info {
+      position: absolute;
+      bottom: 32px;
+      left: 24px;
+      right: 24px;
+      z-index: 10;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-info {
+      transform: translateY(-4px);
+    }
+
+    .team-name {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .team-role {
+      font-size: 14px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-card {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero animate-fade-in" style="background-image: url('assets/images/Team_page1_img8.png');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Team</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team section -->
+  <section class="section-dark">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">Team</span>
+        <h2 class="section-title">Meet Our Leadership Team</h2>
+      </div>
+
+      <div class="team-grid animate-fade-in">
+        <!-- Chairperson 1: Heyramb -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img1.png" alt="Heyramb Damle - Chairperson">
+          <div class="team-info">
+            <h3 class="team-name">Heyramb Damle</h3>
+            <span class="team-role">Chairperson</span>
+          </div>
+        </div>
+
+        <!-- Chairperson 2: Shelly -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img3.png" alt="Shelly Goyal - Chairperson">
+          <div class="team-info">
+            <h3 class="team-name">Shelly Goyal</h3>
+            <span class="team-role">Chairperson</span>
+          </div>
+        </div>
+
+        <!-- Vice Chairperson 1: Dravya -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img4.png" alt="Dravya Gangwal - Vice Chairperson">
+          <div class="team-info">
+            <h3 class="team-name">Dravya Gangwal</h3>
+            <span class="team-role">Vice Chairperson</span>
+          </div>
+        </div>
+
+        <!-- Vice Chairperson 2: Anupam -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img5.png" alt="Anupam Kanoongo - Vice Chairperson">
+          <div class="team-info">
+            <h3 class="team-name">Anupam Kanoongo</h3>
+            <span class="team-role">Vice Chairperson</span>
+          </div>
+        </div>
+
+        <!-- Treasurer: Toshan -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img7.png" alt="Toshan Dubey - Treasurer">
+          <div class="team-info">
+            <h3 class="team-name">Toshan Dubey</h3>
+            <span class="team-role">Treasurer</span>
+          </div>
+        </div>
+
+        <!-- Membership Chair: Daksh -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img10.png" alt="Daksh Patel - Membership Chair">
+          <div class="team-info">
+            <h3 class="team-name">Daksh Patel</h3>
+            <span class="team-role">Membership Chair</span>
+          </div>
+        </div>
+
+        <!-- Secretary: Krishna -->
+        <div class="team-card">
+          <img src="assets/images/Team_page1_img12.png" alt="Krishna Shah - Secretary">
+          <div class="team-info">
+            <h3 class="team-name">Krishna Shah</h3>
+            <span class="team-role">Secretary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

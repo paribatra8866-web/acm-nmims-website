@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Initiatives - ACM NMIMS Indore</title>
+  <meta name="description" content="Explore workshops, hackathons, and guest speaker sessions hosted by ACM NMIMS Indore.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Events Grid */
+    .events-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .event-detail-card {
+      position: relative;
+      height: 320px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .event-detail-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .event-detail-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(4, 13, 22, 0.2) 30%, rgba(4, 13, 22, 0.9) 100%);
+    }
+
+    .event-detail-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .event-detail-content {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      z-index: 10;
+    }
+
+    .event-detail-content h3 {
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .event-detail-content p {
+      font-size: 14px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    /* Dual Section (Why Our Events Matter vs Event Impact) */
+    .split-dark-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .split-panel-dark {
+      background-color: var(--bg-card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .split-panel-dark .checklist {
+      margin: 20px 0 30px;
+    }
+
+    /* Event Philosophy Grid */
+    .philosophy-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .philosophy-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-top: 32px;
+    }
+
+    /* Learning Experiences Blocks */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .experience-block {
+      background-color: #bce6f6;
+      border-radius: var(--radius-md);
+      padding: 24px 32px;
+      color: var(--text-light-primary);
+    }
+
+    .experience-block h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: var(--text-light-primary);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 4px;
+    }
+
+    .experience-block p {
+      font-size: 14px;
+      color: var(--text-light-secondary);
+      line-height: 1.5;
+    }
+
+    /* Curved waves layout */
+    .wave-graphic-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .wave-graphic-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1024px) {
+      .events-grid-2x2, .split-dark-grid, .philosophy-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shared Header Navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar animate-fade-in">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM NMIMS Indore Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="team.html" class="nav-link">Team</a>
+        </div>
+        <div class="nav-cta">
+          <a href="membership.html" class="btn-join">
+            Join ACM
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero animate-fade-in" style="background-image: url('assets/images/event-details_page1_img5.png');">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Events & Initiatives</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main events listing -->
+  <section class="section-dark" style="position: relative;">
+    <!-- Abstract wavy vector shapes from PDFs -->
+    <img src="assets/images/About-Us_page1_img3.png" class="wave-graphic-top" alt="Wave layout shape">
+    <img src="assets/images/About-Us_page1_img3.png" class="wave-graphic-bottom" alt="Wave layout shape">
+
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="section-tag">Events</span>
+        <h2 class="section-title">Explore Our Journey Over Past Two Years</h2>
+      </div>
+
+      <div class="events-grid-2x2 animate-fade-in">
+        <!-- Event 1 -->
+        <div class="event-detail-card">
+          <img src="assets/images/event-details_page1_img1.png" alt="ACM Summit 2025 panel speakers">
+          <div class="event-detail-content">
+            <h3>ACM Summit 2025</h3>
+            <p>Dec 10–12, 2025</p>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-detail-card">
+          <img src="assets/images/event-details_page1_img2.png" alt="TechFest 2025 workshop room">
+          <div class="event-detail-content">
+            <h3>TechFest 2025</h3>
+            <p>Dec 15, 2025</p>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-detail-card">
+          <img src="assets/images/event-details_page1_img6.png" alt="Students playing TechJenga game">
+          <div class="event-detail-content">
+            <h3>TechJenga</h3>
+            <p>Dec 10–12, 2025</p>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-detail-card">
+          <img src="assets/images/event-details_page1_img7.png" alt="ACM-W Launch traditional lamp lighting ceremony">
+          <div class="event-detail-content">
+            <h3>ACM-W Launch</h3>
+            <p>Dec 15, 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Info Panels Section -->
+  <section class="section-dark" style="border-top: 1px solid var(--border-dark); padding-top: 80px;">
+    <div class="container">
+      <div class="split-dark-grid animate-fade-in">
+        <!-- Panel 1: Why Our Events Matter -->
+        <div class="split-panel-dark">
+          <span class="section-tag">Focus Areas</span>
+          <h2 class="section-title" style="font-size: 32px; margin-bottom: 16px;">Why Our Events Matter</h2>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Emerging Technologies
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Artificial Intelligence
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Open Source Contributions
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Research & Innovation
+            </li>
+          </ul>
+          <p style="color: var(--text-dark-secondary); font-size: 14px; line-height: 1.6;">ACM events are more than individual sessions—they create an ecosystem of continuous learning, collaboration, and innovation. Each workshop, hackathon, and speaker interaction contributes to a culture where students are encouraged to explore, experiment, and excel.</p>
+        </div>
+
+        <!-- Panel 2: Event Impact -->
+        <div class="split-panel-dark">
+          <span class="section-tag">Metrics</span>
+          <h2 class="section-title" style="font-size: 32px; margin-bottom: 16px;">Event Impact</h2>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              27+ Events Conducted
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1000+ Participants
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              15+ Industry Speakers
+            </li>
+            <li class="checklist-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              340+ Members Engaged
+            </li>
+          </ul>
+          <p style="color: var(--text-dark-secondary); font-size: 14px; line-height: 1.6;">Over two years, ACM NMIMS Indore has organized workshops, hackathons, guest sessions, and competitions that have empowered students with technical skills, industry exposure, and collaborative learning experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Philosophy & Learning Experiences -->
+  <section class="section-light">
+    <div class="container">
+      <div class="philosophy-layout">
+        <!-- Left Philosophy Content -->
+        <div>
+          <span class="section-tag" style="color: var(--accent-blue);">Event Philosophy</span>
+          <h2 class="section-title" style="color: var(--text-light-primary);">Event Philosophy</h2>
+          <p class="section-desc" style="color: var(--text-light-secondary); font-size: 16px; margin-bottom: 24px;">ACM NMIMS Indore believes that learning extends beyond classrooms. Every workshop, hackathon, speaker session, and competition is designed to encourage innovation, collaboration, and hands-on problem-solving. Our events create opportunities for students to explore emerging technologies, connect with industry professionals, and transform ideas into impactful projects.</p>
+          
+          <div class="philosophy-img">
+            <img src="assets/images/event-details_page1_img9.png" alt="Students Working Collaboratively">
+          </div>
+        </div>
+
+        <!-- Right Learning Experiences cards -->
+        <div>
+          <span class="section-tag" style="color: var(--accent-blue); text-align: center; display: block; margin-bottom: 8px;">Development</span>
+          <h2 class="section-title" style="color: var(--text-light-primary); text-align: center; font-size: 32px;">Creating Meaningful Learning Experiences</h2>
+          
+          <div class="experience-list">
+            <!-- Innovation -->
+            <div class="experience-block">
+              <h3>Innovation</h3>
+              <p>We encourage experimentation, creativity, and exploration of emerging technologies through practical experiences.</p>
+            </div>
+
+            <!-- Collaboration -->
+            <div class="experience-block">
+              <h3>Collaboration</h3>
+              <p>Students work together across diverse teams, fostering communication, teamwork, and shared learning.</p>
+            </div>
+
+            <!-- Excellence -->
+            <div class="experience-block">
+              <h3>Excellence</h3>
+              <p>Every event is planned to deliver high-quality learning opportunities and professional growth.</p>
+            </div>
+
+            <!-- Leadership -->
+            <div class="experience-block">
+              <h3>Leadership</h3>
+              <p>Members are empowered to organize initiatives, lead teams, and drive meaningful impact within the community.</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="achievements.html" class="btn btn-light" style="background-color: var(--bg-dark); color: white;">
+              Achievements
+              <span class="arrow-circle"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <img src="assets/images/Projects_page1_img3.png" alt="ACM Logo" class="footer-logo">
+          <p>Measuring our growth through innovation, community engagement, and technical excellence over the past two years.</p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Super Corridor, Bada Bangarda, Indore</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 0731 2581500</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>acm@nmims.edu</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term Of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Credits</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Get the latest news & updates from ACM NMIMS Indore.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACM, NMIMS INDORE. All rights reserved.</p>
+        <p>Built with Passion by ACM NMIMS Indore Developer Team</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
